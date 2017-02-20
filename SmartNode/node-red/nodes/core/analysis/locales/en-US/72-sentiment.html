@@ -1,0 +1,40 @@
+<!--
+  Copyright 2013 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+
+<script type="text/x-red" data-help-name="sentiment">
+<h3 id="Sentiment analysis node"><a name="Sentiment analysis node" href="#Sentiment analysis node"></a>Sentiment analysis node</h3>
+  <p>Analyses the <b>msg.payload</b> and adds a <b>msg.sentiment</b> object that contains the resulting AFINN-111 sentiment score as <b>msg.sentiment.score</b>.</p>
+  <h4 id="Parameter Configuration"><a name="Parameter Configuration" href="#Parameter Configuration"></a>Parameter Configuration</h4>
+  <ol>
+  <li>Name：The node name</li>
+  <h4 id="Input"><a name="Input" href="#Input"></a>Input</h4>
+  <ol>
+  <li>msg.payload：The input string.</li></ol>
+  <h4 id="Output"><a name="Output" href="#Output"></a>Output</h4>
+  <ol>
+  <li>msg.payload + msg.sentiment：Add a <b>msg.sentiment</b> object that contains the resulting AFINN-111 sentiment score as <b>msg.sentiment.score</b>.</li></ol>
+  <h4 id="Usage"><a name="Usage" href="#Usage"></a>Usage</h4>
+  <ol>
+  <li>A score greater than zero is positive and less than zero is negative.</li>
+  <li>The score typically ranges from -5 to +5, but can go higher and lower.</li>
+  <li>An object of word score overrides can be supplied as <b>msg.overrides</b>.</li>
+   <li>See <a href="https://github.com/thisandagain/sentiment/blob/master/README.md" target="_new">the Sentiment docs here</a>.</li></ol>
+
+    
+    
+</script>
+

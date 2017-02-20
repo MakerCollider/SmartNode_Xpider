@@ -1,0 +1,48 @@
+<!--
+  Copyright 2014, 2015 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="trigger">
+<h3 id="触发节点"><a name="触发节点" href="#触发节点"></a>触发节点</h3>
+<p>这个节点会在收到任何输入消息时，创建两条消息，两条消息之间相隔一个可配置的时间。</p>
+<h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+<ol>
+<li>Send : 发送，the string payload（字符串）/ the existing message（已存在的消息）/ nothing（空）</li>
+<li>then : 然后，wait to be reset（等待重置）/ wait for（等待） 时间（毫秒，秒，分，小时）</li>
+<li>then send : 然后发送，the string payload（字符串）/ the existing message（已存在的消息）/ nothing（空）</li>
+<li>extend delay if new message arrives? ： 当新的消息来时扩展延迟？</li>
+<li>Name：节点名字</li>
+</ol>
+<h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+<ol>
+<li>msg.payload</li></ol>
+<h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+<ol>
+<li>见使用方法</li></ol>
+<h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+<ol>
+  <p>例如，他可以当做一个开关，用来控制树莓派的通用IO的开和关。</p>
+  <p>两条输出消息都是可以指定内容的，不论是设置成输出固定值，还是按照mustache语法设置成一个格式化的字符串，都是支持的。例如，可以设置成<pre>The payload is {{payload}}</pre></p>
+  <p>则会输出“The payload is” 加上输入的msg.payload.</p>
+  <p>如果payload是一个对象，那么设置成 <i>存在的消息</i> 将会发送完整的消息对象。</p>
+  <p>如果选择了当新的消息到来时扩展延时。那么这个节点就可以被重新触发。每次触发都会重设两条消息之间的间隔时间</p>
+  <p>如果设置第一条消息的输出为<i>无</i>, 并且选择扩展延时，那么这就是一个看门狗定时器。如果一直有消息输入，那么就不会有第二条消息输出；一旦有第二条消息输出，就意味着出现了异常。</p>
+  <p>将定时器时间设置为0，则会创建一个不会超时的定时器——第一个输出会出现，但是第二个不会。而且第一条消息也不会被重新触发——这就构造出了一种一次性的消息。</p>
+  <p>如果选择了<b>等待直到复位</b>，则只有收到了<b>msg.reset</b>消息，当前过程才会结束，同时也不会发出第二条消息。</p>
+  <p>如果节点右上角的蓝色小圈状态标记可见，则说明节点处于激活状态。</p>
+</ol>
+    
+</script>
+

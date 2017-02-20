@@ -1,0 +1,87 @@
+<!--
+  Copyright 2013 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="tcp in">
+<h3 id="TCP输入节点"><a name="TCP输入节点" href="#TCP输入节点"></a>TCP输入节点</h3>
+  <p>提供了一种TCP输入的选择机会。可以连接到一个远程的TCP端口，或接受传入的连接。</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li>Type : 类型，Listen on/Connect to 监听或者连接</li>
+  <li>Output : 输出</li>
+  <li>port : 端口</li>
+  <li>Topic : 主题</li>
+  <li>Name：节点名字。</li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li>无</li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li>msg.payload</li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+  <ol>
+  <li>……</li>
+  </ol>
+</script>
+
+<script type="text/x-red" data-help-name="tcp out">
+<h3 id="TCP输出节点"><a name="TCP输出节点" href="#TCP输出节点"></a>TCP输出节点</h3>
+<p>提供了一种TCP输出的选择机会。可以连接到一个远程的TCP端口，或者接受传入的连接，或通过节点的TCP连接回复接收到的消息。</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li>Type : 类型，Listen on/Connect to 监听或者连接</li>
+  <li>port : 端口</li>
+  <li>Close connection after each message is sent? : 每条信息发送之后关闭连接？</li>
+  <li>Decode Base64 message? : 转化Base64编码？</li>
+  <li>Name：节点名字。</li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li>msg.payload</li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li>见使用方法</li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+  <ol>
+  <p>只有 <b>msg.payload</b> 被发送。</p>
+  <p>如果<b>msg.payload</b>是一个包含二进制数据的Base64编码，那么base64解码选项会导致它在被发送前转换回二进制。</p>
+  </ol>
+</script>
+
+<script type="text/x-red" data-help-name="tcp request">
+<h3 id="TCP请求节点"><a name="TCP请求节点" href="#TCP请求节点"></a>TCP请求节点</h3>
+<p>一个简单的TCP请求节点 - 发送<b>msg.payload</b>给一个服务器的端口并等待响应。</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li>Server ： ip.address</li>
+  <li>port : 端口</li>
+  <li>Return : 返回，after a fixed timeout of ... ms,在...ms延迟之后</li>
+  <li>Name：节点名字</li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li>msg.payload</li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li>见使用方法</li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+  <ol>
+  <p>连接，发送“请求”，读取“响应”，不仅可以算返回到一个固定缓冲区的字符个数，也可以在返回之前匹配指定的字符，还可以在第一个回复之后等待一个固定的超时时间，然后返回，或者只是坐等数据。</p>
+  <p>响应将在<b>msg.payload</b>作为缓冲区输出，所以你可以用.totring()转换它。</p>
+  <p>如果你把TCP主机或端口设置为空，那么必须利用 <b>msg.host</b> 和 <b>msg.port</b> 设置这一属性。</p>
+  </ol>    
+</script>
+

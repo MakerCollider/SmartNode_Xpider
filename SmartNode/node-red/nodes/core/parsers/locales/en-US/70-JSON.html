@@ -1,0 +1,48 @@
+<!--
+  Copyright 2014 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="json">
+<h3 id="json Node">json Node</h3>
+
+<p>This node is a function that parses the <b>msg.payload</b> to convert a JSON string to/from a javascript object. Places the result back into the payload.</p>
+
+<h4 id="Parameter Configuration">Parameter Configuration</h4>
+<ol>
+<li>Name：Name of the node.</li>
+</ol>
+
+<h4 id="Input">Input</h4>
+<ol>
+<li>msg.payload：Input</li>
+</ol>
+
+<h4 id="Output">Output</h4>
+<ol>
+<li>msg.payload：Output</li>
+</ol>
+
+<h4 id="Usage">Usage</h4>
+<ol>
+<li>Configure all the parameters properly.If the input is a JSON string it tries to parse it to a javascript object.If the input is a javascript object it creates a JSON string.
+</li>
+</ol>
+</script>
+
+<!--<script type="text/x-red" data-help-name="json">
+    <p>A function that parses the <b>msg.payload</b> to convert a JSON string to/from a javascript object. Places the result back into the payload.</p>
+    <p>If the input is a JSON string it tries to parse it to a javascript object.</p>
+    <p>If the input is a javascript object it creates a JSON string.</p>
+</script>-->

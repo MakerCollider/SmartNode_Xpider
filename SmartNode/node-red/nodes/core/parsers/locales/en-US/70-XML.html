@@ -1,0 +1,65 @@
+<!--
+  Copyright 2014 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="xml">
+<h3 id="XML Node">XML Node</h3>
+
+<p>This node is a function that parses the <b>msg.payload</b> to convert xml to/from a javascript object. Places the result in the payload.</p>
+
+<h4 id="Parameter Configuration">Parameter Configuration</h4>
+<ol>
+<li>Name：Name of the node/</li>
+<li>Advanced options：</li>
+<ol>
+<li>Represent XML tag attributes as a property named：Represent XML tag attributes as a property.</li>
+<li>Prefix to access character content：(There is no simple way to convert XML attributes to JSON so the approach taken here is to add a property, named $ by default, to the JSON structure.)</li>
+</ol>
+</ol>
+
+
+<h4 id="Input">Input</h4>
+<ol>
+<li>msg.payload：Input</li>
+</ol>
+
+<h4 id="Output">Output</h4>
+<ol>
+<li><p>If the input is a string it tries to parse it as XML and creates a javascript object.</p> <p>If the input is a javascript object it tries to build an XML string.</p>
+</li>
+</ol>
+
+<h4 id="Usage">Usage</h4>
+<ol>
+<li>Configure all the parameters properly.If the input is a string it tries to parse it as XML and creates a javascript object.
+  If the input is a javascript object it tries to build an XML string.
+    <p>You can also pass in a <b>msg.options</b> object to overide all the multitude of parameters. See
+    <a href="https://github.com/Leonidas-from-XIV/node-xml2js/blob/master/README.md" target="_new">the xml2js docs <i>here</i></a>
+     for more information.</p>
+     <p>If set, options in the edit dialogue override those passed in on the msg.options object.</p>
+</li>
+</ol>
+</script>
+
+<!--<script type="text/x-red" data-help-name="xml">
+    <p>A function that parses the <b>msg.payload</b> to convert xml to/from a javascript object. Places the result in the payload.</p>
+    <p>If the input is a string it tries to parse it as XML and creates a javascript object.</p>
+    <p>If the input is a javascript object it tries to build an XML string.</p>
+    <p>You can also pass in a <b>msg.options</b> object to overide all the multitude of parameters. See
+    <a href="https://github.com/Leonidas-from-XIV/node-xml2js/blob/master/README.md" target="_new">the xml2js docs <i>here</i></a>
+     for more information.</p>
+     <p>If set, options in the edit dialogue override those passed in on the msg.options object.</p>
+</script>
+-->

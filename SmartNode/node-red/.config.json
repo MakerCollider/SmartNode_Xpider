@@ -1,0 +1,747 @@
+{
+ "nodes": {
+  "node-red": {
+   "name": "node-red",
+   "version": "0.13.4",
+   "nodes": {
+    "sentiment": {
+     "name": "sentiment",
+     "types": [
+      "sentiment"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\analysis\\72-sentiment.js"
+    },
+    "inject": {
+     "name": "inject",
+     "types": [
+      "inject"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\20-inject.js"
+    },
+    "catch": {
+     "name": "catch",
+     "types": [
+      "catch"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\25-catch.js"
+    },
+    "status": {
+     "name": "status",
+     "types": [
+      "status"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\25-status.js"
+    },
+    "debug": {
+     "name": "debug",
+     "types": [
+      "debug"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\58-debug.js"
+    },
+    "exec": {
+     "name": "exec",
+     "types": [
+      "exec"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\75-exec.js"
+    },
+    "function": {
+     "name": "function",
+     "types": [
+      "function"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\80-function.js"
+    },
+    "template": {
+     "name": "template",
+     "types": [
+      "template"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\80-template.js"
+    },
+    "delay": {
+     "name": "delay",
+     "types": [
+      "delay"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\89-delay.js"
+    },
+    "trigger": {
+     "name": "trigger",
+     "types": [
+      "trigger"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\89-trigger.js"
+    },
+    "comment": {
+     "name": "comment",
+     "types": [
+      "comment"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\90-comment.js"
+    },
+    "unknown": {
+     "name": "unknown",
+     "types": [
+      "unknown"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\core\\98-unknown.js"
+    },
+    "rpi-gpio": {
+     "name": "rpi-gpio",
+     "types": [
+      "rpi-gpio in",
+      "rpi-gpio out",
+      "rpi-mouse",
+      "rpi-keyboard"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\hardware\\36-rpi-gpio.js"
+    },
+    "mqtt": {
+     "name": "mqtt",
+     "types": [
+      "mqtt in",
+      "mqtt out",
+      "mqtt-broker"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\io\\10-mqtt.js"
+    },
+    "httpin": {
+     "name": "httpin",
+     "types": [
+      "http in",
+      "http response"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\io\\21-httpin.js"
+    },
+    "httprequest": {
+     "name": "httprequest",
+     "types": [
+      "http request"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\io\\21-httprequest.js"
+    },
+    "websocket": {
+     "name": "websocket",
+     "types": [
+      "websocket in",
+      "websocket out",
+      "websocket-listener",
+      "websocket-client"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\io\\22-websocket.js"
+    },
+    "watch": {
+     "name": "watch",
+     "types": [
+      "watch"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\io\\23-watch.js"
+    },
+    "tcpin": {
+     "name": "tcpin",
+     "types": [
+      "tcp in",
+      "tcp out",
+      "tcp request"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\io\\31-tcpin.js"
+    },
+    "udp": {
+     "name": "udp",
+     "types": [
+      "udp in",
+      "udp out"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\io\\32-udp.js"
+    },
+    "switch": {
+     "name": "switch",
+     "types": [
+      "switch"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\logic\\10-switch.js"
+    },
+    "change": {
+     "name": "change",
+     "types": [
+      "change"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\logic\\15-change.js"
+    },
+    "range": {
+     "name": "range",
+     "types": [
+      "range"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\logic\\16-range.js"
+    },
+    "CSV": {
+     "name": "CSV",
+     "types": [
+      "csv"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\parsers\\70-CSV.js"
+    },
+    "HTML": {
+     "name": "HTML",
+     "types": [
+      "html"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\parsers\\70-HTML.js"
+    },
+    "JSON": {
+     "name": "JSON",
+     "types": [
+      "json"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\parsers\\70-JSON.js"
+    },
+    "XML": {
+     "name": "XML",
+     "types": [
+      "xml"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\parsers\\70-XML.js"
+    },
+    "tail": {
+     "name": "tail",
+     "types": [
+      "tail"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\storage\\28-tail.js"
+    },
+    "file": {
+     "name": "file",
+     "types": [
+      "file",
+      "file in"
+     ],
+     "enabled": true,
+     "module": "node-red",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\nodes\\core\\storage\\50-file.js"
+    }
+   }
+  },
+  "node-red-contrib-gpio": {
+   "name": "node-red-contrib-gpio",
+   "version": "0.8.0",
+   "nodes": {
+    "gpio": {
+     "name": "gpio",
+     "types": [
+      "gpio in",
+      "gpio out",
+      "nodebot",
+      "johnny5"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-gpio",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-gpio\\gpio.js"
+    }
+   }
+  },
+  "node-red-contrib-graphs": {
+   "name": "node-red-contrib-graphs",
+   "version": "0.3.5",
+   "nodes": {
+    "datasource": {
+     "name": "datasource",
+     "types": [
+      "iot-datasource"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-graphs",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-graphs\\datasource.js"
+    }
+   }
+  },
+  "node-red-contrib-neuralnetwork": {
+   "name": "node-red-contrib-neuralnetwork",
+   "version": "1.0.0",
+   "nodes": {
+    "neuralNetwork": {
+     "name": "neuralNetwork",
+     "types": [
+      "neuralNetwork"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-neuralnetwork",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-neuralnetwork\\neuralNetwork\\neuralNetwork.js"
+    },
+    "inputCollect": {
+     "name": "inputCollect",
+     "types": [
+      "inputCollect"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-neuralnetwork",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-neuralnetwork\\inputCollect\\inputCollect.js"
+    },
+    "outputCollect": {
+     "name": "outputCollect",
+     "types": [
+      "outputCollect"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-neuralnetwork",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-neuralnetwork\\outputCollect\\outputCollect.js"
+    },
+    "controlMode": {
+     "name": "controlMode",
+     "types": [
+      "controlMode"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-neuralnetwork",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-neuralnetwork\\controlMode\\controlMode.js"
+    }
+   }
+  },
+  "node-red-contrib-smartnode": {
+   "name": "node-red-contrib-smartnode",
+   "version": "1.1.2",
+   "nodes": {
+    "Led": {
+     "name": "Led",
+     "types": [
+      "LED",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\actuator\\led\\led.js"
+    },
+    "Piezo": {
+     "name": "Piezo",
+     "types": [
+      "Piezo",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\actuator\\piezo\\piezo.js"
+    },
+    "Relay": {
+     "name": "Relay",
+     "types": [
+      "Relay",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\actuator\\relay\\relay.js"
+    },
+    "Servo": {
+     "name": "Servo",
+     "types": [
+      "Servo",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\actuator\\servo\\servo.js"
+    },
+    "Light": {
+     "name": "Light",
+     "types": [
+      "Light",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\light\\light.js"
+    },
+    "Touch": {
+     "name": "Touch",
+     "types": [
+      "Touch",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\touch\\touch.js"
+    },
+    "Button": {
+     "name": "Button",
+     "types": [
+      "Button",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\button\\button.js"
+    },
+    "Motion": {
+     "name": "Motion",
+     "types": [
+      "Motion",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\motion\\motion.js"
+    },
+    "Rotation": {
+     "name": "Rotation",
+     "types": [
+      "Rotation",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\rotation\\rotation.js"
+    },
+    "IRSwitch": {
+     "name": "IRSwitch",
+     "types": [
+      "IRSwitch",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\irswitch\\irswitch.js"
+    },
+    "Sound": {
+     "name": "Sound",
+     "types": [
+      "Sound",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\sound\\sound.js"
+    },
+    "Temperature": {
+     "name": "Temperature",
+     "types": [
+      "Temperature",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\temperature\\temperature.js"
+    },
+    "Moisture": {
+     "name": "Moisture",
+     "types": [
+      "Moisture",
+      "nodebot"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\sensor\\moisture\\moisture.js"
+    },
+    "Camera": {
+     "name": "Camera",
+     "types": [
+      "Camera"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\imageProcessing\\camera\\camera.js"
+    },
+    "FaceDetect": {
+     "name": "FaceDetect",
+     "types": [
+      "FaceDetect"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\imageProcessing\\faceDetect\\facedetect.js"
+    },
+    "Image2base64": {
+     "name": "Image2base64",
+     "types": [
+      "Image2base64"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\imageProcessing\\image2base64\\image2base64.js"
+    },
+    "GeometryDetect": {
+     "name": "GeometryDetect",
+     "types": [
+      "GeometryDetect"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\imageProcessing\\geometryDetect\\geometryDetect.js"
+    },
+    "Math": {
+     "name": "Math",
+     "types": [
+      "Math"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\math\\math-operations.js"
+    },
+    "Toggle": {
+     "name": "Toggle",
+     "types": [
+      "Toggle"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\toggle\\toggle.js"
+    },
+    "random": {
+     "name": "random",
+     "types": [
+      "random"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\random\\random.js"
+    },
+    "Combine": {
+     "name": "Combine",
+     "types": [
+      "Combine"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\combine\\combine.js"
+    },
+    "CToggle": {
+     "name": "CToggle",
+     "types": [
+      "CToggle"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\ctoggle\\ctoggle.js"
+    },
+    "SubString": {
+     "name": "SubString",
+     "types": [
+      "substring"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\subString\\substring.js"
+    },
+    "add-strings": {
+     "name": "add-strings",
+     "types": [
+      "add-strings"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\addString\\add-strings.js"
+    },
+    "change-sign": {
+     "name": "change-sign",
+     "types": [
+      "change-sign"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\changeSign\\change-sign.js"
+    },
+    "change-type": {
+     "name": "change-type",
+     "types": [
+      "change-type"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\logic\\changeType\\change-type.js"
+    },
+    "say": {
+     "name": "say",
+     "types": [
+      "say"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\extra\\say\\say.js"
+    },
+    "audio": {
+     "name": "audio",
+     "types": [
+      "Audio"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\extra\\audio\\audio.js"
+    },
+    "wechat": {
+     "name": "wechat",
+     "types": [
+      "wechat in",
+      "wechat out"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\extra\\wechat\\wechat.js"
+    },
+    "WeChatPic": {
+     "name": "WeChatPic",
+     "types": [
+      "WeChatPic"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\extra\\weChatPic\\weChatPic.js"
+    },
+    "face": {
+     "name": "face",
+     "types": [
+      "face"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\recognition\\face\\face.js"
+    },
+    "tts": {
+     "name": "tts",
+     "types": [
+      "tts"
+     ],
+     "enabled": true,
+     "module": "node-red-contrib-smartnode",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-contrib-smartnode\\recognition\\tts\\tts.js"
+    }
+   }
+  },
+  "node-red-node-email": {
+   "name": "node-red-node-email",
+   "version": "0.1.9",
+   "nodes": {
+    "email": {
+     "name": "email",
+     "types": [
+      "e-mail",
+      "e-mail in"
+     ],
+     "enabled": true,
+     "module": "node-red-node-email",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-node-email\\61-email.js"
+    }
+   }
+  },
+  "node-red-node-feedparser": {
+   "name": "node-red-node-feedparser",
+   "version": "0.1.5",
+   "nodes": {
+    "feedparse": {
+     "name": "feedparse",
+     "types": [
+      "feedparse"
+     ],
+     "enabled": true,
+     "module": "node-red-node-feedparser",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-node-feedparser\\32-feedparse.js"
+    }
+   }
+  },
+  "node-red-node-rbe": {
+   "name": "node-red-node-rbe",
+   "version": "0.1.5",
+   "nodes": {
+    "rbe": {
+     "name": "rbe",
+     "types": [
+      "rbe"
+     ],
+     "enabled": true,
+     "module": "node-red-node-rbe",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-node-rbe\\rbe.js"
+    }
+   }
+  },
+  "node-red-node-serialport": {
+   "name": "node-red-node-serialport",
+   "version": "0.1.2",
+   "nodes": {
+    "serialport": {
+     "name": "serialport",
+     "types": [
+      "serial in",
+      "serial out",
+      "serial-port"
+     ],
+     "enabled": true,
+     "module": "node-red-node-serialport",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-node-serialport\\25-serial.js"
+    }
+   }
+  },
+  "node-red-node-twitter": {
+   "name": "node-red-node-twitter",
+   "version": "0.1.6",
+   "nodes": {
+    "twitter": {
+     "name": "twitter",
+     "types": [
+      "twitter-credentials",
+      "twitter in",
+      "twitter out"
+     ],
+     "enabled": true,
+     "module": "node-red-node-twitter",
+     "file": "D:\\nodejs\\node-red-max\\SmartNode\\node-red\\node_modules\\node-red-node-twitter\\27-twitter.js"
+    }
+   }
+  }
+ }
+}

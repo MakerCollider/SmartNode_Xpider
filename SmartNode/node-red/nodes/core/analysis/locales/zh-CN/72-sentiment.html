@@ -1,0 +1,38 @@
+<!--
+  Copyright 2013 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="sentiment">
+<h3 id="情绪分析节点"><a name="情绪分析节点" href="#情绪分析节点"></a>情绪分析节点</h3>
+  <p>这是一个用于分析文字情绪的节点。它可以分析<b>msg.payload</b>中携带的字符串，并在msg中添加一个<b>msg.sentiment</b>对象。这个对象中包含一个AFINN-111标准的情绪得分，这个得分包含在<b>msg.sentiment.score</b>中。</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li>Name：节点名字。</li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li>msg.payload：输入字符串。</li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li>msg.payload + msg.sentiment：在msg中添加一个<b>msg.sentiment</b>对象。这个对象中包含一个AFINN-111标准的情绪得分，这个得分包含在<b>msg.sentiment.score</b>中。</li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+  <ol>
+  <li>如果得分大于零，则说明这段文字是正面的，否则，是负面的.</li>
+  <li>通常这个得分在-5到+5之间，但是也有可能高于或者低于这个范围</li>
+  <li>对于某些敏感词，可以使用<b>msg.overrides</b>来覆盖这个敏感词，这样，输出的msg.payload中就不包含敏感词.</li>
+  <li>详细请参考 <a href="https://github.com/thisandagain/sentiment/blob/master/README.md" target="_new">文档</a></li></ol>
+    
+</script>
+

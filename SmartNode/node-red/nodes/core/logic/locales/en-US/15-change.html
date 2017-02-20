@@ -1,0 +1,54 @@
+﻿<!--
+  Copyright 2013, 2015 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="change">
+<h3 id="Change Node">Change Node</h3>
+
+<p>This node can set, change or delete properties of a message.</p>
+
+<h4 id="Parameter Configuration">Parameter Configuration</h4>
+
+<ol>
+<li>Name：Name of the node.</li>
+<li>Rules：<ul>
+        <li><b>Set</b> - set a property.The <b>to</b>property can either be a string value, or reference another message property by name, for example: <code>msg.topic</code>.</li>
+        <li><b>Change</b> - search &amp; replace parts of the property.If regular expressions are enabled, the property can include capture groups,,  <b>replace with</b> property can include capture groups.For example  <code>$1</code></li>
+        <li><b>Delete</b> - delete a property.</li>
+    </ul>
+</li>
+</ol>
+
+<h4 id="Input">Input</h4>
+
+<ol>
+<li>msg.payload：Input the information you want to change.</li>
+</ol>
+
+<h4 id="Output">Output</h4>
+
+
+<ol>
+<li>msg.payload：Output changed information.</li>
+</ol>
+
+<h4 id="Usage">Usage</h4>
+
+<ol>
+<li>Configure all the parameters properly.The node can specify multiple rules that will be applied to the message in turn.
+</li>
+</ol>
+</script>
+

@@ -1,0 +1,95 @@
+﻿<!--
+  Copyright 2013, 2014 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+
+
+<script type="text/x-red" data-help-name="file in">
+<h3 id="读取文件节点">读取文件节点</h3>
+
+<p>本节点读取指定文件，并将内容作为 <b>msg.payload</b> 发送, 并且在 <b>msg.filename</b>中携带读取的文件名。</p>
+<h4 id="参数配置">参数配置</h4>
+
+<ol>
+<li>文件名：文件名称。如果留空，它将会使用输入的<b>msg.filename</b>中指定的文件名。</li>
+<li>作为…输出：输出UTF-8字符串或者作为缓冲区输出。</li>
+<li>名称：节点名称</li>
+</ol>
+
+
+
+
+
+
+
+<h4 id="输入量">输入量</h4>
+
+<ol>
+<li>msg.payload：输入要读取文件的信息</li>
+</ol>
+
+<h4 id="输出量">输出量</h4>
+
+<ol>
+<li>输出指定文件的内容</li>
+</ol>
+
+
+<h4 id="使用方法">使用方法</h4>
+
+<ol>
+<li>配置好节点的每个参数。</li>
+</ol>
+</script>
+
+  
+<script type="text/x-red" data-help-name="file">
+<h3 id="写文件节点">写文件节点</h3>
+
+<p>本节点表示将<b>msg.payload</b>写进指定的文件, 例如创建一个日志。</p>
+
+<h4 id="参数配置">参数配置</h4>
+
+<ol>
+<li>Filename：文件名称。如果为空它将会使用输入的<b>msg.filename</b>中指定的文件名</li>
+<li>Action：行为。append to file:默认行为,附加到已存在的文件末尾。overwrite file:每次覆盖文件，例如如果你想输出一个“静态”的web页面或报告。delete file:删除一个文件。 <i>Note:</i> 使用 msg.delete 这种方式删除已经被弃用了。</li>
+<li>Add newline (\n) to each payload?：是否需要每条消息添加一个换行符, 如果需要关闭它也是可以的</li>
+<li>Create directory if it doesn't exist?:如果路径不存在是否自动创建此路径。</li>
+<li>Name：节点名称</li>
+</ol>
+
+<h4 id="输入量">输入量</h4>
+
+<ol>
+<li>msg.payload：输入要写到文件的信息</li>
+</ol>
+
+<h4 id="输出量">输出量</h4>
+
+<ol>
+<li>无</li>
+</ol>
+
+
+<h4 id="使用方法">使用方法</h4>
+
+<ol>
+<li>配置好节点的每个参数。</li>
+<li>当输入<code>msg.payload</code>时，节点根据选择的动作进行文件操作。
+</li>
+</ol>
+</script>
+
+

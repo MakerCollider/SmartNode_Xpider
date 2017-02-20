@@ -1,0 +1,10 @@
+//httpin.label.palette-resp
+{
+    "httpin": {
+        "label": {
+            "palette-in": "HTTP in",
+            "palette-resp": "HTTP response",
+            "palette-req": "HTTP request"
+        }
+    }
+}

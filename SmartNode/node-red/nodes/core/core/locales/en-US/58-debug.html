@@ -1,0 +1,42 @@
+<!--
+  Copyright 2013, 2015 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="debug">
+<h3 id="Debug node"><a name="Debug node" href="#Debug node"></a>Debug node</h3>
+<p>The Debug node can be connected to the output of any node. It can be used to display the output of any message property in the debug tab of the sidebar. The default is to display <b>msg.payload</b>.</p>
+<h4 id="Parameter Configuration"><a name="Parameter Configuration" href="#Parameter Configuration"></a>Parameter Configuration</h4>
+<ol>
+<li>Output: Message Properties / complete message object</li>
+<li>Output to: Debug tab / Debug tab and debugging console</li>
+<li>Name : The node name</li>
+</ol>
+<h4 id="Input"><a name="Input" href="#Input"></a>Input</h4>
+<ol>
+<li>msg.payload</li></ol>
+<h4 id="Output"><a name="Output" href="#Output"></a>Output</h4>
+<ol>
+<li>The debug information</li></ol>
+<h4 id="Usage"><a name="Usage" href="#Usage"></a>Usage</h4>
+<ol>
+<li>Each message will also display the timestamp, <b>msg.topic</b> and the property chosen to output.</li>
+<li>The sidebar can be accessed under the options drop-down in the top right corner.</li>
+<li>The button to the right of the node will toggle its output on and off so you can de-clutter the debug window.</li>
+<li>If the payload is an object or buffer it will be stringified first for display and indicate that by saying "(Object)" or "(Buffer)".</li>
+<li>Selecting any particular message will highlight (in red) the debug node that reported it. This is useful if you wire up multiple debug nodes.</li>
+<li>Optionally can show the complete <b>msg</b> object.</li>
+<li>In addition any calls to node.warn or node.error will appear here.</li>
+</ol>
+</script>

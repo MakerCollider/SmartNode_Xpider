@@ -1,0 +1,9 @@
+{//rpi-gpio.label.palette-out
+    "rpi-gpio": {
+        "label": {
+            "palette-in": "rpi-gpio in",
+            "palette-out": "rpi-gpio out",
+            "palette-mouse": "rpi-gpio mouse"
+        }
+    }
+}

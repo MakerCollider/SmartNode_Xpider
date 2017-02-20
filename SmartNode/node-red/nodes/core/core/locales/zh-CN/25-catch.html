@@ -1,0 +1,44 @@
+<!--
+  Copyright 2015 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="catch">
+<h3 id="捕获节点"><a name="捕获节点" href="#捕获节点"></a>捕获节点</h3>
+<p>这个节点用来从其他的node中捕获异常（在同一个工作区中）。</p>
+<h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+<ol>
+<li>Catch errors from : 从...中捕获错误</li>
+<li>Name：节点名字。</li>
+</ol>
+<h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+<ol>
+<li>无</li></ol>
+<h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+<ol>
+<li>异常</li></ol>
+<h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+<ol>
+<li>如果一个节点在处理消息时抛出了异常，通常整个工作流就会挂起。这个节点就可以用来捕获这个异常，并且使用catch节点后续的工作流处理这个异常。</li>
+<li>catch节点将会捕获工作区中任意节点抛出的异常，如果工作区中有多个catch节点，那么一旦有异常发生，所有的catch节点将被激活。</li>
+<li>如果子工作流抛出了异常，那么首先子工作流中的catch节点将会捕获到异常，但是如果子工作流中没有catch节点，则这个异常将会被传播到上一级工作流中，由上一级工作流中的catch节点处理。</li>
+<li>如果抛出异常的节点的异常信息中包含了原始的消息，那么catch节点的输出中，也会包含原始消息，并且还会包含一个含有如下属性的<code>error</code>字段：
+<ul>
+        <li><code>message</code> : 错误信息</li>
+        <li><code>source.id</code> : 抛出异常的节点ID</li>
+        <li><code>source.type</code> : 抛出异常的节点类型</li>
+        <li><code>source.name</code> : 抛出异常的节点名称（如果配置了节点名称的话）</li>
+</ul>
+</p><p>如果原始消息中已经包含了<code>error</code>字段，则它将会被拷贝到catch输出消息的<code>error</code>字段中。</p></ol>  
+</script>

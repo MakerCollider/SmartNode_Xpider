@@ -1,0 +1,44 @@
+<!--
+  Copyright 2013,2015 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="exec">
+<h3 id="Execution node"><a name="Execution node" href="#Execution node"></a>Execution node</h3>
+<p>Calls out to a system command.<br/></p>
+<h4 id="Parameter Configuration"><a name="Parameter Configuration" href="#Parameter Configuration"></a>Parameter Configuration</h4>
+<ol>
+<li>Command : Command</li>
+<li>Append : Append</li>
+<li>Use spawn() instead of exec()?</li>
+<li>Name：The node name</li>
+</ol>
+<h4 id="Input"><a name="Input" href="#Input"></a>Input</h4>
+<ol>
+<li>msg.payload ： </li></ol>
+<h4 id="Output"><a name="Output" href="#Output"></a>Output</h4>
+<ol>
+<li>stdout、stderr and return</li></ol>
+<h4 id="Usage"><a name="Usage" href="#Usage"></a>Usage</h4>
+<ol>
+  <p>Provides 3 outputs... stdout, stderr, and return code.</p>
+  <p>By default uses exec() which calls the command, then gets a callback on completion, returning the complete result in one message, along with any errors.</p>
+  <p>Optionally can use spawn() instead, which returns the output from stdout and stderr as the command runs (usually one line at a time). On completion it then returns a return code (on the 3rd output).</p>
+  <p>The optional append gets added to the command after the <b>msg.payload</b> - so you can do things like pipe the result to another command.</p>
+  <p>Parameters with spaces should be enclosed in quotes - <i>"This is a single parameter"</i></p>
+  <p>If stdout is binary a <i>buffer</i> is returned - otherwise returns a <i>string</i>.</p>
+  <p>The blue status icon will be visible while the node is active.</p>
+</ol>
+
+</script>

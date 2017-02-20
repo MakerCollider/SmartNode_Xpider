@@ -1,0 +1,8 @@
+{//mqtt.label.palette-out
+    "mqtt": {
+        "label": {
+            "palette-in": "MQTT输入",
+            "palette-out": "MQTT输出"
+        }
+    }
+}

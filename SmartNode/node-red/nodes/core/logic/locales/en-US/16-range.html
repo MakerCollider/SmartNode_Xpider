@@ -1,0 +1,52 @@
+﻿<!--
+  Copyright 2013 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="range">
+<h3 id="Range Node">Range Node</h3>
+
+<p>This node is a simple function node to remap numeric input values to another scale</p>
+
+<h4 id="Parameter Configuration">Parameter Connfiguration</h4>
+
+<ol>
+<li>Action：How to remap.</li>
+<li>Map the input range：Input range.</li>
+<li>to the result range：Result of the remap.</li>
+<li>Round reseult ro the nearest integer? ：Round reseult or not.</li>
+<li>Name ：Name of this node.</li>
+</ol>
+
+<h4 id="Input">Input</h4>
+
+<ol>
+<li>msg.payload：Input</li>
+</ol>
+
+<h4 id="Output">Output</h4>
+
+<li>msg.payload：Output</li>
+
+<h4 id="Usage">Usage</h4>
+
+<ol>
+<li>Configure all the parameters properly.</li>
+<p>
+    <p><b>Note:</b> This only operates on <b>numbers</b>. Anything else will try to be made into a number and rejected if that fails.</p>
+    <p><i>Scale and limit to target range</i> means that the result will never be outside the range specified within the result range.</p>
+    <p><i>Scale and wrap within the target range</i> means that the result will essentially be a "modulo-style" wrap-around within the result range.</p>
+</p>
+</ol>
+</script>

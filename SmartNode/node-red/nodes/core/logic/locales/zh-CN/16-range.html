@@ -1,0 +1,52 @@
+﻿<!--
+  Copyright 2013 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="range">
+<h3 id="范围节点">范围节点</h3>
+
+<p>本节点是一个简单的函数节点，他可以重新映射数字输入值到另一个范围。</p>
+
+<h4 id="参数配置">参数配置</h4>
+
+<ol>
+<li>行为：映射的种类</li>
+<li>映射输入范围：输入数字范围</li>
+<li>到输出范围：映射到的数字范围<li>
+<li>取整 ：输出是否取整</li>
+<li>名称 ：节点名称</li>
+</ol>
+
+<h4 id="输入量">输入量</h4>
+
+<ol>
+<li>msg.payload：输入</li>
+</ol>
+
+<h4 id="输出量">输出量</h4>
+
+<li>msg.payload：输出</li>
+
+<h4 id="使用方法">使用方法</h4>
+
+<ol>
+<li>配置好节点的每个参数。</li>
+<p>目前只实现了线性扩展。</p>
+    <p><b>Note:</b> 这只作用于 <b>numbers</b>. 所有的对象将会被转换为做数字处理，如果转换失败了，则拒绝映射操作。</p>
+    <p><i>扩展和限制目标范围</i> 这意味着输出值不会超出结果范围。</p>
+    <p><i>在目标范围内扩展和封装</i> 意味着将会输出一个环绕式的“取模运算式”的在结果范围之内的值。</p>
+</ol>
+</script>
+

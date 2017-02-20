@@ -1,0 +1,14 @@
+//websocket.label.palette-client
+//websocket.label.palette-listener
+//websocket.label.palette-out
+//websocket.label.palette-in
+{
+    "websocket": {
+        "label": {
+            "palette-in": "palette-in",
+            "palette-out": "palette-out",
+            "palette-listener": "palette-listener",
+            "palette-client": "palette-client"
+        }
+    }
+}

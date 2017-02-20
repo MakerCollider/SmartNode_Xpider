@@ -1,0 +1,9 @@
+{//rpi-gpio.label.palette-out
+    "rpi-gpio": {
+        "label": {
+            "palette-in": "树莓派通用IO输入",
+            "palette-out": "树莓派通用IO输出",
+            "palette-mouse": "树莓派鼠标按键状态"
+        }
+    }
+}

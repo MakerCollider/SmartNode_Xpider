@@ -1,0 +1,79 @@
+﻿
+<!--
+  Copyright 2014,2015 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="csv">
+<h3 id="CSV Node">CSV Node</h3>
+
+<p>This node is a function that parses the <b>msg.payload</b> to convert CSV to/from a javascript object.</p>
+
+<h4 id="Parameter Configuration">Parameter Configuration</h4>
+<ol>
+<li>Columns：comma-separated column names.</li>
+<li>Separator：Separator.</li>
+<li>Name：Name of the node.</li>
+<li>CSV-to-Object options：CSV-to-Object options.</li>
+
+<li>Input:first row contains column names：Whether the first row contains column names or not.</li>
+<li>Output：a message per row or a single message [array]</li>
+
+<li>Object-to-CSV options：javascript object convert to CSV string option.</li>
+
+<li>Output：include column name row:Output：Whether to include column name row or not.</li>
+<li>Newline：New line format.：Linux format（end with \n） Mac format（end with \r） Windows format（end with\r\n）</li>
+</ol>
+
+
+<h4 id="Input">Input</h4>
+
+<ol>
+<li>msg.payload：Input</li>
+<p>If the input is a string it tries to parse it as CSV and creates a javascript object.</p>
+<p>If the input is a javascript object it tries to build a CSV string.</p>
+<p>If the input is a simple array the output is just a CSV generated from that array.</p>
+<p>If the input is an array of arrays or an array of objects a multiple-line CSV is created.</p>
+<p>If the input is an array then the columns template does not matter, but can be used to generate a row of column titles.</p>
+</ol>
+
+<h4 id="Output">Output</h4>
+<ol>
+<li>See "Input"</li>
+</ol>
+
+<h4 id="Usage">Usage</h4>
+<ol>
+<li>Configure all the parameters properly.</li>
+<li>When input <code>msg.payload</code>，this node manipulate the file according to the specified action.<p>The columns template should contain an ordered list of column headers. For CSV input these become the property names.
+    For CSV output these specify the properties to extract from the object and the order for the CSV.</p> <p><b>Note:</b> the columns should always be specified comma separated - even if another separator is chosen for the data.</p>
+</li>
+</ol>
+</script>
+
+
+<!--script type="text/x-red" data-help-name="csv">
+    <p>A function that parses the <b>msg.payload</b> to convert CSV to/from a javascript object.
+    Places the result in the payload.</p>
+    <p>If the input is a string it tries to parse it as CSV and creates a javascript object.</p>
+    <p>If the input is a javascript object it tries to build a CSV string.</p>
+    <p>If the input is a simple array the output is just a CSV generated from that array.</p>
+    <p>If the input is an array of arrays or an array of objects a multiple-line CSV is created.</p>
+
+
+    <p>The columns template should contain an ordered list of column headers. For CSV input these become the property names.
+    For CSV output these specify the properties to extract from the object and the order for the CSV.</p>
+    <p>If the input is an array then the columns template does not matter, but can be used to generate a row of column titles.</p>
+    <p><b>Note:</b> the columns should always be specified comma separated - even if another separator is chosen for the data.</p>
+    </script>-->

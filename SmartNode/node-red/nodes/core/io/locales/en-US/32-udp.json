@@ -1,0 +1,9 @@
+//udp.label.palette-out
+{
+    "udp": {
+        "label": {
+            "palette-in": "udp in",
+            "palette-out": "udp out"
+        }
+    }
+}

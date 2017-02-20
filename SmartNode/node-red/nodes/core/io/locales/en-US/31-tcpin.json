@@ -1,0 +1,11 @@
+//tcpin.label.palette-in
+//tcpin.label.palette-request
+{
+    "tcpin": {
+        "label": {
+            "palette-in": "TCP in",
+            "palette-request": "TCP request",
+            "palette-out": "TCP out"
+        }
+    }
+}

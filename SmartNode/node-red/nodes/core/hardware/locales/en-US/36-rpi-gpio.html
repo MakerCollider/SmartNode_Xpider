@@ -1,0 +1,110 @@
+<!--
+  Copyright 2013,2014 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="rpi-gpio in">
+<h3 id="rpi-gpio in node"><a name="rpi-gpio in node" href="#rpi-gpio in node"></a>rpi-gpio in node</h3>
+  <p>Raspberry Pi input node. Generates a <b>msg.payload</b> with either a 0 or 1 depending on the state of the input pin. Requires the gpio command to work.</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li></li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li></li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li></li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4> 
+  <ol>
+    <p>你可能还需要使能输入的拉高电阻或者拉低电阻。</p>
+    <p>消息中的<b>msg.topic</b>字段，包含<i>pi/{引脚编号}</i></p>
+    <p>需要RPi.GPIO python库（版本 0.5.8，或者更高)才能正常工作。</p>
+	<p><b>注意:</b> 这个节点使用了连接器P1的实际物理引脚编号，以便于更容易的定位引脚编号。</p>
+  </ol>
+</script>
+<script type="text/x-red" data-help-name="rpi-gpio in">
+    
+    <p>You may also enable the input pullup resistor or the pulldown resistor.</p>
+    <p>The <b>msg.topic</b> is set to <i>pi/{the pin number}</i></p>
+    <p>Requires the RPi.GPIO python library version 0.5.8 (or better) in order to work.</p>
+    <p><b>Note:</b> we are using the actual physical pin numbers on connector P1 as they are easier to locate.</p>
+    </script>
+<script type="text/x-red" data-help-name="rpi-gpio out">
+<h3 id="树莓派通用IO输出节点"><a name="树莓派通用IO输出节点" href="#树莓派通用IO输出节点"></a>树莓派通用IO输出节点</h3>
+  <p>这是一个树莓派的通用IO输出节点。节点的期望输入是包含了0或者1（或者true和false）的<b>msg.payload</b>。并且它需要通用IO命令才能工作</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li></li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li></li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li></li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4> 
+  <ol>
+    <p>这个节点将会按照输入的数值来设定物理引脚的电平高低。</p>
+    <p>部署时的初始值可以是1，也可以是0.</p>
+    <p>当使用PWM模式的时候，期望的输入则是0-100之间的数字。</p>
+    <p>需要RPi.GPIO python库（版本 0.5.8，或者更高)才能正常工作。</p>
+    <p><b>注意:</b> 这个节点使用了连接器P1的实际物理引脚编号，以便于更容易的定位引脚编号。</p>
+  </ol>
+</script>
+<script type="text/x-red" data-help-name="rpi-gpio out">
+    <p>Raspberry Pi output node. Expects a <b>msg.payload</b> with either a 0 or 1 (or true or false). Requires the gpio command to work.</p>
+    <p>Will set the selected physical pin high or low depending on the value passed in.</p>
+    <p>The initial value of the pin at deploy time can also be set to 0 or 1.</p>
+    <p>When using PWM mode - expects an input value of a number 0 - 100.</p>
+    <p>Requires the RPi.GPIO python library version 0.5.8 (or better) in order to work.</p>
+    <p><b>Note:</b> we are using the actual physical pin numbers on connector P1 as they are easier to locate.</p>
+</script>
+
+<script type="text/x-red" data-help-name="rpi-mouse">
+<h3 id="树莓派鼠标按键状态节点"><a name="树莓派鼠标按键状态节点" href="#树莓派鼠标按键状态节点"></a>树莓派鼠标按键状态节点</h3>
+  <p>这是一个读取树莓派鼠标按键状态的节点。需要一个USB接口的鼠标才能工作</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li></li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li></li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li></li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4> 
+  <ol>
+    <p>当鼠标的按键按下时，将会发出一个 <b>msg.payload</b> 为1的消息，释放时发出一个<b>msg.payload</b> 为0的消息</p>
+    <p>并且还会设置 <b>msg.button</b> 为按钮的编号
+    <ul><li>1 = 左键</li><li>2 = 右键</li><li>4 = 中键</li></ul>
+    这样的话，你就可以处理各种组合按键的情况</p>
+    <p>另外，<b>msg.topic</b>会被设置为<i>pi/mouse</i>.</p>
+  </ol>
+</script>
+
+<script type="text/x-red" data-help-name="rpi-mouse">
+    <p>Raspberry Pi mouse button node. Requires a USB mouse.</p>
+    <p>Generates a <b>msg.payload</b> with
+    either a 1 or 0 when the selected mouse button is pressed and released</p>
+    <p>Also sets <b>msg.button</b> to the code value
+    <ul><li>1 = left</li><li>2 = right</li><li>4 = middle</li></ul>
+    so you can work out which button or combination was pressed.</p>
+    <p>And sets <b>msg.topic</b> to <i>pi/mouse</i>.</p>
+</script>
+    
+
+

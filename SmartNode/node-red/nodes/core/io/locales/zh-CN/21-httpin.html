@@ -1,0 +1,119 @@
+<!--
+  Copyright 2013 IBM Corp.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/x-red" data-help-name="http in">
+<h3 id="HTTP输入节点"><a name="HTTP输入节点" href="#HTTP输入节点"></a>HTTP输入节点</h3>
+<p>这个节点可以生成一个简单的http requests, 用来创建一个简单的web服务。</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li>Name：节点名字。</li>
+  </ol>
+  <li>Method : 方法，GET、PUT、POST、DELETE</li>
+  <li>URL : 网页地址</li>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li>NULL</li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li>Http request</li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+  <ol>
+    <p>结果消息包含下面的字段:
+        <ul>
+            <li>msg.req : <a href="http://expressjs.com/api.html#req">http request</a></li>
+            <li>msg.res : <a href="http://expressjs.com/api.html#res">http response</a></li>
+        </ul>
+    </p>
+    <p>对于POST/PUT请求, 消息体包含在<code>msg.req.body</code>中。 可以使用<a href="http://expressjs.com/api.html#bodyParser">Express bodyParser middleware</a>来把它解析成一个JSON对象。
+    </p>
+    <p>
+       在默认情况下，期望的请求消息体应该是URL编码过的：
+       <pre>foo=bar&amp;this=that</pre>
+    </p>
+    <p>
+       如果希望发送JSON格式编码过的对象，到这个节点，那么请求消息的content-type header必须要设置成 <code>application/json</code>。
+    </p>
+    <p>
+       <b>注意: </b>这个节点不会给http请求发送任何的响应。
+       这个过程应该由另外一个HTTP Response 节点。
+    </p>
+</ol>
+</script>
+
+<script type="text/x-red" data-help-name="http response">
+<h3 id="HTTP响应节点"><a name="HTTP响应节点" href="#HTTP响应节点"></a>HTTP响应节点</h3>
+<p>这个节点用来给http requests节点回响应。</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li>Name：节点名字</li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li>http request</li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li>见使用方法</li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+  <ol>
+    <p>响应消息可以用以下的字段来自定义内容：</p>
+    <ul>
+        <li><code>payload</code> 响应消息的消息体</li>
+        <li><code>statusCode</code>, 如果设置了，则表示相依消息的状态码（默认是200）</li>
+        <li><code>headers</code>如果设置了，则是一个包含了field/value的对象。</li>
+    </ul>
+    </ol>
+</script>
+<script type="text/x-red" data-help-name="http request">
+<h3 id="HTTP请求节点"><a name="HTTP请求节点" href="#HTTP请求节点"></a>HTTP请求节点</h3>
+<p>这个节点可以接收其他节点的消息，并触发生成一个http requests。</p>
+  <h4 id="配置参数"><a name="配置参数" href="#配置参数"></a>配置参数</h4>
+  <ol>
+  <li>Method : 方法，GET/POS/PUT/DELETE</li>
+  <li>URL : 网页地址/li>
+  <li>Return : 返回</li>
+  <li>Name：节点名字。</li>
+  </ol>
+  <h4 id="输入"><a name="输入" href="#输入"></a>输入</h4>
+  <ol>
+  <li>msg.payload</li></ol>
+  <h4 id="输出"><a name="输出" href="#输出"></a>输出</h4>
+  <ol>
+  <li>http request</li></ol>
+  <h4 id="使用方法"><a name="使用方法" href="#使用方法"></a>使用方法</h4>
+  <ol>
+    <p>节点中可以配置URL和HTTP方法。但是如果没有配置的话，那么节点接收到的消息中，就需要带有 <code>msg.url</code> 和 <code>msg.method</code>字段，如下:</p>
+    <ul>
+        <li><code>url</code>, 如果设置，则用来做为HTTP请求的URL地址。这个地址必须是http:或者https:开头的。</li>
+        <li><code>method</code>, 如果设置，则用来作为HTTP请求的方法。方法必须是
+        <code>GET</code>, <code>PUT</code>, <code>POST</code>, <code>PATCH</code> 或者 <code>DELETE</code> 其中的一个，默认是GET方法。</li>
+        <li><code>headers</code>, 如果设置了，则是一个包含了field/value的对象，这个对象会被添加到Http Requests的头部。</li>
+        <li><code>payload</code> 作为Request消息的消息体。</li>
+    </ul>
+    <p>URL字段如果在节点中做配置的话，他就可以支持<a href="http://mustache.github.io/mustache.5.html" target="_new">mustache-style</a> 的标签. 这样的话，就可以使用收到的消息来构造一个灵活可变的URL。例如，如果URL被配置为
+    <code>example.com/{{{topic}}}</code>, 那么收到的消息中的<code>msg.topic</code>字段就会被自动的插入到URL中的topic字段。
+    对于一些特殊字符，例如 '/', '&',可以使用 {{{...}}} 来阻止mustache自动格式化。</p>
+    <p>
+    输出的消息中包含下面的字段：
+    <ul>
+        <li><code>payload</code> response响应消息的消息体</li>
+        <li><code>statusCode</code> respones消息的状态码，或者如果无法完成Http Request的话，那么就会包含错误码</li>
+        <li><code>headers</code> 包含对象的Response消息头部</li>
+    </ul>
+    <p><b>注意</b>: 如果你需要配置一个代理才能上网的话，你需要通过增加<b>http_proxy=...</b>环境变量的方式，把代理的地址增加到环境变量中，然后重新启动SmartNode。</p>
+    </p>
+    </ol>
+</script>
+
