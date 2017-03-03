@@ -1,0 +1,201 @@
+body {
+  padding-top: 70px;
+  background-color: #202325;
+}
+
+.container {
+  display : none;
+}
+
+.statusBar {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: #34393C;
+  border-top: solid 1px black;
+  padding: 2px 10px;
+  z-index: 1001;
+  height: 24px;
+}
+
+.statusBarMessage {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.statusBarConnect {
+  width: 16px;
+  height: 16px;
+  background-image: url( '../images/disconnected.png' );
+  float: right;
+  margin-top: -18px;
+}
+
+.statusBarConnect.connected {
+  background-image: url( '../images/connected.png' );
+}
+
+#navbar-collapsed ul {
+  display : none;
+}
+
+.form-control[disabled] {
+  cursor: default;
+}
+
+.graphContainer {
+  width: 100%;
+}
+
+#dashboardPage {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#gridList {
+  position: relative;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+#gridList li {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 0;
+  position: absolute;
+  -moz-transition: top 0.2s,
+                   left 0.2s;
+  -webkit-transition: top 0.2s,
+                      left 0.2s;
+}
+
+#gridList li.ui-draggable-dragging, #gridList li.ui-resizable-resizing {
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+
+.gridItemHeader {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  height: 30px;
+  padding: 2px;
+  display: block;
+  background-color: #353A40;
+  text-align: center;
+  cursor: pointer;
+}
+
+.gridItemContent {
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 5px;
+  background-color: #292C2F;
+  overflow: hidden;
+}
+
+.position-highlight {
+  background-color: #1d1f21;
+}
+
+.gridItemOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba( 0 , 0 , 0 , 0.5 );
+  z-index: 100;
+}
+
+.gridItemOverlayContent {
+  position: relative;
+  top: 35%;
+  width: 50%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  color: #FFF;
+}
+
+.panel.panel-small {
+  margin-bottom: 5px;
+}
+
+.panel.panel-small .panel-heading {
+  font-size: 80%;
+  padding: 1px 1px 1px 10px;
+  height: 24px;
+  line-height: 22px;
+}
+
+.panel-heading.panel-clickable {
+  cursor: pointer;
+}
+
+.panel-heading.panel-clickable:hover {
+  background-image: none;
+  background-color: #3C414A;
+}
+
+.datasourceDataComponents {
+  margin-bottom: 15px;
+}
+
+.datasourceComponent {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-direction: row;
+  flex-direction: row;
+  height: 24px;
+  padding: 1px;
+}
+
+.datasourceComponentBtn {
+  width: 24px;
+}
+
+.datasourceComponentInputCont {
+  -webkit-flex: 1;
+  flex: 1;
+  padding-left: 10px;
+}
+
+.datasourceComponentInput {
+  background-color: #25282D;
+  width: 100%;
+  border: none;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+.datasourceComponentInput::-webkit-input-placeholder
+{
+  color: #6a7482;
+}
+
+.datasourceComponentInput:-moz-placeholder
+{
+  color: #6a7482;
+}
+
+.datasourceComponentInput::-moz-placeholder
+{
+  color: #6a7482;
+}
+
+.datasourceComponentInput:-ms-input-placeholder
+{
+  color: #6a7482;
+}
