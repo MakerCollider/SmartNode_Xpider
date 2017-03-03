@@ -74,6 +74,9 @@
         label: function() {
             return this.name || "range";
         },
+        paletteLabel: function () {
+            return this.name||this._("range.label.palette");
+        },
         labelStyle: function() {
             return this.name ? "node_label_italic" : "";
         }

@@ -40,6 +40,9 @@
         label: function() {
             return this.name||"json";
         },
+        paletteLabel: function () {
+            return this.name||this._("json.label.palette");
+        },
         labelStyle: function() {
             return this.name?"node_label_italic":"";
         }

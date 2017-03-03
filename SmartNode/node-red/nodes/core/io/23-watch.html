@@ -55,6 +55,9 @@
         label: function() {
             return this.name||this.files;
         },
+        paletteLabel: function () {
+            return this.name||this._("watch.label.palette");
+        },
         labelStyle: function() {
             return this.name?"node_label_italic":"";
         }

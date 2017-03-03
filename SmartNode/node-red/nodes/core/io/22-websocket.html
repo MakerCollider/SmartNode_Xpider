@@ -117,6 +117,9 @@
         labelStyle: function() {
             return this.name?"node_label_italic":"";
         },
+        paletteLabel: function () {
+            return this.name||this._("websocket.label.palette-in");
+        },
         label: ws_label,
         oneditsave: ws_oneditsave,
         oneditprepare: ws_oneditprepare
@@ -136,6 +139,9 @@
         align: "right",
         labelStyle: function() {
             return this.name?"node_label_italic":"";
+        },
+        paletteLabel: function () {
+            return this.name||this._("websocket.label.palette-out");
         },
         label: ws_label,
         oneditsave: ws_oneditsave,
@@ -162,6 +168,9 @@
             }
             return root;
         },
+        paletteLabel: function () {
+            return this.name||this._("websocket.label.palette-listener");
+        },
         oneditprepare: function() {
             var root = RED.settings.httpNodeRoot;
             if (root.slice(-1) == "/") {
@@ -186,6 +195,9 @@
         outputs:0,
         label: function() {
             return this.path;
+        },
+        paletteLabel: function () {
+            return this.name||this._("websocket.label.palette-client");
         }
     });
 

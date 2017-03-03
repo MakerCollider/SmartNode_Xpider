@@ -27,6 +27,13 @@
             "nooverride": "Warning: msg properties can no longer override set node properties. See bit.ly/nr-override-msg-props"
         }
     },
+    "cateinject": {
+        "label": {
+            "palette":"category-in",
+            "catename":"property-name",
+            "payload":"payload"
+        }
+    },
     "inject": {
         "inject": "inject",
         "repeat": "repeat = __repeat__",
@@ -34,7 +41,8 @@
         "stopped": "stopped",
         "failed": "Inject failed: __error__",
         "label": {
-            "repeat": "Repeat"
+            "repeat": "Repeat",
+            "palette":"inject"
         },
         "timestamp": "timestamp",
         "none": "none",
@@ -311,7 +319,8 @@
     },
     "watch": {
         "label": {
-            "files": "File(s)"
+            "files": "File(s)",
+            "palette":"watch"
         },
         "placeholder": {
             "files": "Comma-separated list of files and/or directories"
@@ -434,7 +443,8 @@
     "switch": {
         "label": {
             "property": "Property",
-            "rule": "rule"
+            "rule": "rule",
+            "palette":"switch"
         },
         "and": "and",
         "checkall": "checking all rules",

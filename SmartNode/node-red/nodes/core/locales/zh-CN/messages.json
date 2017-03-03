@@ -27,6 +27,13 @@
             "nooverride":"警告: 消息属性无法覆盖节点属性. 详见 bit.ly\/nr-override-msg-props"
         }
     },
+    "cateinject": {
+        "label": {
+            "palette":"分类输入",
+            "catename":"分类属性",
+            "payload":"分类值"
+        }
+    },
     "inject": {
         "inject": "插入",
         "repeat": "重复次数 = __repeat__",
@@ -451,7 +458,9 @@
             "property": "属性",
             "rule":"规则",
             "palette":"判断\/切换"
+            
         },
+
         "and": "与",
         "checkall": "检查所有规则",
         "stopfirst": "第一次匹配后停止检查",

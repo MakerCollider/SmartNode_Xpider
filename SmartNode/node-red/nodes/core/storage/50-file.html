@@ -99,6 +99,9 @@
                 return this.name||this.filename||this._("file.label.filelabel");
             }
         },
+        paletteLabel: function () {
+            return this.name||this._("file.label.palette-in");
+        },
         labelStyle: function() {
             return this.name?"node_label_italic":"";
         },
@@ -123,6 +126,9 @@
         icon: "file.png",
         label: function() {
             return this.name||this.filename||this._("file.label.filelabel");
+        },
+        paletteLabel: function () {
+            return this.name||this._("file.label.palette-out");
         },
         labelStyle: function() {
             return this.name?"node_label_italic":"";
