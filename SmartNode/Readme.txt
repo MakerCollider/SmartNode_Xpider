@@ -1,2 +1,3 @@
-1、下载SmartNode_Xpider.zip，并解压
-2、运行SmartNode.cmd
+1. Download the SmartNode_Xpider.zip ,unzip it.
+2. run SmartNode.cmd
+3. Open Browser then input 'http://127.0.0.1:1880'. 
